@@ -1,0 +1,14 @@
+package com.sapient.userservice.model;
+
+
+public class Theatre {
+	
+	private int theatreid;
+	
+	private String theatrename;
+	
+	private String theatrelocation;
+	
+	private int theatrecapacity;
+
+}

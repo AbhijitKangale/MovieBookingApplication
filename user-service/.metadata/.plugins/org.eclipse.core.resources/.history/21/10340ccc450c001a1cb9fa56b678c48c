@@ -1,0 +1,7 @@
+package com.sapient.userservice.service;
+
+public interface IUserService {
+	
+	public Movie searchMovie(Movie movie);
+
+}

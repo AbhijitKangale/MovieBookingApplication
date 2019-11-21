@@ -1,0 +1,13 @@
+package com.sapient.userservice.serviceimpl;
+
+import com.sapient.userservice.service.IUserService;
+
+public class UserServiceImpl implements IUserService {
+
+	@Override
+	public void searchMovie(String movie) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
