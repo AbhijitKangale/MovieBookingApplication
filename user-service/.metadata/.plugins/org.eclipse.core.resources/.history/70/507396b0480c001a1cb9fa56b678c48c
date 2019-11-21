@@ -1,0 +1,22 @@
+package com.sapient.userservice.serviceimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
+
+import com.sapient.userservice.model.Movie;
+import com.sapient.userservice.service.IUserService;
+
+public class UserServiceImpl implements IUserService {
+	
+	@Autowired
+	private RestTemplate movieSearchRestTemplate;
+
+	@Override
+	public Movie searchMovie(String movie) {
+		
+		Movie movieObj = this.movieSearchRestTemplate.getForObject("", Movie.class);
+		return movieObj;
+		
+	}
+
+}

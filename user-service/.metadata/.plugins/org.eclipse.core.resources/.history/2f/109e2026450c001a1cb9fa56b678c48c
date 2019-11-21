@@ -1,0 +1,5 @@
+package com.sapient.userservice.service;
+
+public class IUserService {
+
+}
