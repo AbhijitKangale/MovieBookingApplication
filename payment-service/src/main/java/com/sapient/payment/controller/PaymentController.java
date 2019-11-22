@@ -18,12 +18,12 @@ import com.sapient.payment.model.PaymentOutput;
 public class PaymentController {
 
 	@PostMapping("/payment")
-	public String makePayment(@RequestBody BookingDetail bookingDetail) {
+	public PaymentOutput makePayment(@RequestBody BookingDetail bookingDetail) {
 		PaymentOutput output = new PaymentOutput();
 		output.setBookingDetail(bookingDetail);
 		output.setSuccess(true);
 		output.setMessage("Payment successful for booking id " + bookingDetail.getBookingId());
-		// return output;
-		return "Success";
+		return output;
+		// return "Success";
 	}
 }
