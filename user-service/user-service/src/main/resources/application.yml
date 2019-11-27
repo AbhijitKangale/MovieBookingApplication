@@ -29,21 +29,32 @@ eureka:
       defaultZone: http://localhost:8761/sapient/eureka/
   instance:
      preferIpAddress: true
+
+#Feign related
+feign:
+    hystrix:
+        enabled: true
+
+#Logging related
 logging:
   level:
     org:
       hibernate:
         type: trace
+    com:
+      sapient:
+        userservice:
+          feignserviceclient: DEBUG
 #Spring Security & oAuth related
 #security:
 #  oauth2:
 #    client:
-#      clientId: <client_id>
-#      clientSecret: <client_secret>
-#      accessTokenUri: <access_token_uri>
-#      userAuthorizationUri: <auth-uri>
-#      tokenName: <token_name>
-#      authenticationScheme: <scheme>
+#      clientId: sapient
+#      clientSecret: sapient123
+#      accessTokenUri: http://localhost:9000/oauth2/token
+#      userAuthorizationUri: http://localhost:9000/oauth2/auth
+#      tokenName: oauth_token
+#      authenticationScheme: query
 #      clientAuthenticationScheme: form
 #    resource:
-#      userInfoUri: <userInfoUri>
+#      userInfoUri: http://localhost:9000/oauth2/user

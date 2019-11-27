@@ -6,9 +6,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.sapient.userservice.feignserviceclient.fallback.MovieServiceClientFallback;
 import com.sapient.userservice.movieservice.response.Movie;
 
-@FeignClient("movie-service")
+@FeignClient(name="movie-service", fallback=MovieServiceClientFallback.class)
 public interface MovieServiceClient {
 	
 	@GetMapping("/Movies/getAllMovies")

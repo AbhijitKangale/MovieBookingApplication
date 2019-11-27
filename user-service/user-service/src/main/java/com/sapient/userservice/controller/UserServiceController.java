@@ -27,9 +27,9 @@ public class UserServiceController {
 	}
 	
 	@PostMapping("/movie/book-ticket")
-	public void bookMovie(@RequestBody BookingDetail bookingDetail) {
+	public BookingDetail bookMovie(@RequestBody BookingDetail bookingDetail) {
 		
-		
+		return this.userService.bookMovie(bookingDetail);
 		
 	}
 
